@@ -7,6 +7,12 @@ class User < ActiveRecord::Base
 
   has_one :profile
   has_many :items
+  # I am on the User table, I am looking for my purchases which is associated to
+  # a buyer_id (who is a User) on the Order table
+  has_many :purchases, class_name: "Order", foreign_key: "buyer_id"
+  # I am on the User table, I am looking for my sales which is associated to a
+  #seller_id (who is a User) on the Order table
+  has_many :sales, class_name: "Order", foreign_key: "seller_id"
 
   after_create :assign_role
 

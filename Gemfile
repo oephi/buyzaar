@@ -5,6 +5,22 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+
+#irb shell
+gem 'pry-rails'
+
+gem 'pry'
+
+# For creating GPS (lat and long) coordinates from address
+gem 'geocoder'
+
+# For plotting on maps
+gem 'gmaps4rails'
+
+#use bootstrap gem
+gem 'bootstrap-sass', '~> 3.3.6'
+
 # Used to upload images
 gem 'carrierwave'
 
